@@ -32,12 +32,16 @@ public class ControladorVetirinaria implements ActionListener {
         vista.iniciar(this);
     }
 
+    // Desencadenantes de acciones 
     @Override
     public void actionPerformed(ActionEvent e) {
         switch (operacion) {
             case INSERTAR:
                 Mascota nuevaMascota = vista.getMascota();
                 model.insertarMascotaAlista(nuevaMascota);
+                break;
+            case ACTUALIZAR:
+                vista.actualizarMascota(model.getListaMascotasDisponibles());
                 break;
             case LISTAR:
                 vista.listarMascotas(model.getListaMascotasDisponibles());
