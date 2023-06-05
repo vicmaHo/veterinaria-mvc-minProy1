@@ -10,7 +10,7 @@ import model.Mascota;
 import model.Perro;
 import model.RazaPerro;
 
-public class App {
+public class OldApp {
 
     // Array que contiene las mascotas 
     static ArrayList<Mascota> mascotas = new ArrayList<Mascota>();
