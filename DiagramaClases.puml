@@ -1,0 +1,55 @@
+@startuml "DiagramaVeterinaria"
+
+abstract Mascota{
+    -int: id
+    -ArrayList<String>: vacunas
+    -double: precio
+    -string: paisOrigen
+    -static int: contador
+    +void mostrarInformacion()
+}
+
+class Perro{
+    -String: nombre
+    -RazaPerro: raza
+    -ArrayList<Pulga> pulgas
+}
+
+class Gato{
+    -String nombre
+
+}
+
+enum RazaPerro {
+    Bulldog
+    Golden
+    Caniche
+    Beagle
+    Rottweiler
+    Dachshund
+    Pug
+    Labrador
+    Tacita
+    Pastor
+    Otro
+}
+
+class Pulga{
+    -String: nombre
+    -Integer: cantidadSangre
+}
+
+interface MejorAmigo{
+    +String saludar();
+    +String apodo();
+    +String tributo();
+}
+
+
+Mascota <-up- Perro
+Mascota <-up- Gato
+Perro *-left- RazaPerro
+MejorAmigo <-down- Perro
+MejorAmigo <-down- Gato
+Perro *-right- Pulga
+@enduml
