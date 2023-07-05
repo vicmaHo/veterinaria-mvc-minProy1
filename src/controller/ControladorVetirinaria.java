@@ -51,9 +51,21 @@ public class ControladorVetirinaria implements ActionListener {
                 break;
             case LISTAR:
                 vista.listarMascotas(model.getListaMascotasDisponibles());
+                System.out.println(model.getListaMascotasDisponibles().size());
+        
                 break;
             case ESTADISTICAS:
                 vista.SubMenu(model.getListaMascotasDisponibles());
+                break;
+            case GUARDAR:
+                model.guardarDatos();
+                vista.guardarDatos();
+                break;
+            case CARGAR:
+                model.limpiarListaMascotras();
+                model.cargarDatos();
+                vista.cargarDatos();
+                break;
             default:
                 break;
         }

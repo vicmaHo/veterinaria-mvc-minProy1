@@ -1,0 +1,8 @@
+gato,Jose,100000000000,Bolivia,papa,
+perro,Alfederico,Tacita,120000,Mexico,malota,buenota,caca,
+gato,Alberto,1233123,Babilonia,caca,
+gato,Papo,12,Colombia,
+perro,Bob,Bulldog,120000,Babilonia,malota,buenota,
+perro,bob,Caniche,25000,Alemania,malota,buenota,noelmismobob,
+perro,Calvin,Rottweiler,90121111000,Polonia,pisa,pal,ol,
+gato,Cloe,200000,Chile,tetanus,malota,

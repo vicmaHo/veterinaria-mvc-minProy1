@@ -44,6 +44,8 @@ public class VeterinariaVistaConsola implements VistaVeterinaria {
                                +"4. Buscar mascota por nombre\n"
                                +"5. Listar todas las mascotas\n"
                                +"6. Ingresar al sub-menu\n"
+                               +"7. Guardar datos\n"
+                               +"8. Cargar datos\n"
                                +"0. Salir\n"
                                +"Ingrese una opcion: ");
             opc=sc.nextByte();
@@ -73,6 +75,13 @@ public class VeterinariaVistaConsola implements VistaVeterinaria {
                     controlador.setOperacion(Operacion.ESTADISTICAS);
                     controlador.actionPerformed(null);
                     break;
+                case 7:
+                    controlador.setOperacion(Operacion.GUARDAR);
+                    controlador.actionPerformed(null);
+                    break;
+                case 8:
+                    controlador.setOperacion(Operacion.CARGAR);
+                    controlador.actionPerformed(null);
                 default:
                     break;
             }
@@ -293,6 +302,7 @@ public class VeterinariaVistaConsola implements VistaVeterinaria {
             System.out.println("--------------------");
             mascota.mostrarInformacion();
         }
+        System.out.println("Tamaño de la lista: " + mascotas.size());
         esperarEnter();
     }
 
@@ -533,6 +543,20 @@ public class VeterinariaVistaConsola implements VistaVeterinaria {
         System.out.print("\nTotal de mascotas extranjeras: "+contador);
 
         esperarEnter();  
+    }
+
+    @Override
+    public void guardarDatos() {
+        limpiarConsola();
+        System.out.println("Datos almacenados con exito");
+        esperarEnter();
+    }
+
+    @Override
+    public void cargarDatos() {
+        limpiarConsola();
+        System.out.println("Datos cargados con exito");
+        esperarEnter();
     }
 
 }

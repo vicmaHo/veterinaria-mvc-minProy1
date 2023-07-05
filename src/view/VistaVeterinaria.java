@@ -14,4 +14,6 @@ public interface VistaVeterinaria {
     public void buscarMascota(ArrayList<Mascota> mascotas);
     public void listarMascotas(ArrayList<Mascota> mascotas);
     public void SubMenu(ArrayList<Mascota> mascotas);
+    public void guardarDatos();
+    public void cargarDatos();
 }

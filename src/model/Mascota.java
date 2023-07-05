@@ -14,7 +14,7 @@ public abstract class Mascota implements Comparable<Mascota> {
     private String paisOrigen;
 
     //Contador para el id
-    private static int contador = 1;
+    private static int contadorID = 1;
 
     // Constructores 
     // 2 argumentos
@@ -22,7 +22,7 @@ public abstract class Mascota implements Comparable<Mascota> {
         vacunas = new ArrayList<String>();
         this.precio = precio;
         this.paisOrigen = paisOrigen;
-        this.id = contador++; // agrego el valor del id y lo aumento en 1
+        this.id = contadorID++; // agrego el valor del id y lo aumento en 1
     }
 
     public double getPrecio() {
@@ -46,6 +46,14 @@ public abstract class Mascota implements Comparable<Mascota> {
     }
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getContadorID(){
+        return contadorID;
+    }
+
+    public void setContadorID(int numId){
+        this.contadorID = numId;
     }
 
     public void setVacunas(ArrayList<String> vacunas){

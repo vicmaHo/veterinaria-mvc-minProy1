@@ -6,5 +6,7 @@ public enum Operacion {
     ACTUALIZAR,
     LISTAR,
     BUSCAR,
-    ESTADISTICAS
+    ESTADISTICAS,
+    GUARDAR,
+    CARGAR
 }
